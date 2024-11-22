@@ -10,6 +10,7 @@ if($args.Length -gt 0){
         $fileToCompile = Get-Item $fileName
         ..\juice.exe -c -f $fileToCompile.Name
         $compiledFile = Get-Item "$fileName.mes"
+        Remove-Item $compiledFile.Name.Substring(0,$compiledFile.Name.Length-8) -ErrorAction Ignore
         Rename-Item $compiledFile ($compiledFile.Name.Substring(0,$compiledFile.Name.Length-8))
     }
     exit
@@ -19,5 +20,6 @@ forEach($msgFile in Get-ChildItem "*.rkt"){
 ..\juice.exe -c $msgFile.Name
 }
 forEach($msgFile in Get-ChildItem "*.rkt.mes"){
+Remove-Item $msgFile.Name.Substring(0,$msgFile.Name.Length-8) -ErrorAction Ignore
 Rename-Item $msgFile ($msgFile.Name.Substring(0,$msgFile.Name.Length-8))
 }
