@@ -1,5 +1,5 @@
 (mes
- (meta (engine 'ADV) (charset "pc98") (extraop #t))
+ (meta (engine 'ADV) (charset "english") (extraop #t))
  (seg*
   ((cmd 203) 5 16)
   (loop
@@ -54,7 +54,7 @@
      (/ (str " climaxx／spanking love "))
      (/ (str "     2 be continued     "))
      (/ (str "       beat crazy       "))
-     (/ (str " 　音楽モードを終わる　 "))))
+     (/ (str "  ==Leave music room==  "))))
    (exec-mem 256 "P 0 4 64")
    (if (</>
         (//

@@ -1,5 +1,5 @@
 (mes
- (meta (engine 'ADV) (charset "pc98") (extraop #t))
+ (meta (engine 'ADV) (charset "english") (extraop #t))
  (seg*
   ((cmd 209) 0 5)
   (image-file "gpc¥waku.gpc")
@@ -39,15 +39,15 @@
    5
    200
    (</>
-    (/ (text "　　エイプリル　　"))
-    (/ (str "　　 レイファ 　　"))
-    (/ (str "　　　 ナナ 　　　"))
-    (/ (text "　　　ミツコ　　　"))
-    (/ (text "　　　エリコ　　　"))
+    (/ (text "      April       "))
+    (/ (str "      Leifa       "))
+    (/ (str "       Nana       "))
+    (/ (text "     Mitsuko      "))
+    (/ (text "      Eriko       "))
     (/ (text "　　　プリス　　　"))
-    (/ (text "　　　アンナ　　　"))
-    (/ (text "全てのキャラを見る"))
-    (/ (text "　　キャンセル　　"))))
+    (/ (text "       Anna       "))
+    (/ (text "   View all CGs   "))
+    (/ (text "      Cancel      "))))
   (exec-mem 256 "P 1 4 64")
   (exec-mem 3968 101 639 399 639 399)
   (exec-mem 3072 0)
