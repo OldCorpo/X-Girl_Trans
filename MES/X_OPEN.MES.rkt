@@ -1,5 +1,5 @@
 (mes
- (meta (engine 'ADV) (charset "pc98") (extraop #t))
+ (meta (engine 'ADV) (charset "english") (extraop #t))
  (seg*
   ((cmd 206) 0 0)
   ((cmd 206) 1 1)
@@ -111,7 +111,7 @@
    24
    1
    40
-   (</> (/ (text "　ＦＭ音源内蔵　")) (/ (str " 　音源ボード　 ")) (/ (text "　　音源無し　　"))))
+   (</> (/ (text "    FM Sound    ")) (/ (str "   Soundboard   ")) (/ (text "    No Sound    "))))
   (exec-mem 256 "P 1 0 0")
   (if (</>
        (// (? (= S 0)) (nop@) (set-var O 0))

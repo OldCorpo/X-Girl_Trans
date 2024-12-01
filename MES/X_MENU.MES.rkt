@@ -1,5 +1,5 @@
 (mes
- (meta (engine 'ADV) (charset "pc98") (extraop #t))
+ (meta (engine 'ADV) (charset "english") (extraop #t))
  (seg*
   ((cmd 210))
   (exec-mem 3968 1 0)
@@ -39,11 +39,11 @@
           5
           136
           (</>
-           (/ (text "最初から始める"))
-           (/ (str " ゲームの再開 "))
+           (/ (text "   New Game   "))
+           (/ (str "  Load Save   "))
            (/ (text "−ａｓｏｋｏ−"))
-           (/ (text "　　音楽室　　"))
-           (/ (str " 　終了する　 ")))))
+           (/ (text "  Music Room  "))
+           (/ (str "     Quit     ")))))
         (/
          (exec-mem 4768 4 8 20 14 1 0 0 4480 4480 1 0)
          (menu1
@@ -60,12 +60,12 @@
           5
           152
           (</>
-           (/ (text "　最初から始める　"))
-           (/ (str "　 ゲームの再開 　"))
+           (/ (text "   Continue   "))
+           (/ (str "  Load Save   "))
            (/ (text "　−ａｓｏｋｏ−　"))
-           (/ (text "　　　音楽室　　　"))
-           (/ (text "オープニングを見る"))
-           (/ (str " 　　終了する　　 "))))))))
+           (/ (text "  Music Room  "))
+           (/ (text " Watch Opening"))
+           (/ (str "     Quit     "))))))))
      (/
       (exec-mem 4768 4 8 20 16 1 0 0 4480 4480 1 0)
       (menu1
@@ -84,13 +84,13 @@
        5
        168
        (</>
-        (/ (text "　最初から始める　"))
-        (/ (str "　 ゲームの再開 　"))
+        (/ (text "   Continue   "))
+        (/ (str "  Load Save   "))
         (/ (text "　−ａｓｏｋｏ−　"))
-        (/ (text "　　　音楽室　　　"))
-        (/ (text "オープニングを見る"))
-        (/ (text "　　ＣＧルーム　　"))
-        (/ (str " 　　終了する　　 ")))))))
+        (/ (text "  Music Room  "))
+        (/ (text " Watch Opening"))
+        (/ (text "    CG Room   "))
+        (/ (str "     Quit     ")))))))
    (nop@)
    (set-var K 0)
    ((cmd 203) 5 16)
@@ -159,12 +159,12 @@
           6
           160
           (</>
-           (/ (text "　ファイル１　"))
-           (/ (text "　ファイル２　"))
-           (/ (text "　ファイル３　"))
-           (/ (text "　ファイル４　"))
-           (/ (text "　ファイル５　"))
-           (/ (text "　キャンセル　"))))
+           (/ (text "    File 1    "))
+           (/ (text "    File 2    "))
+           (/ (text "    File 3    "))
+           (/ (text "    File 4    "))
+           (/ (text "    File 5    "))
+           (/ (text "    Cancel    "))))
          (exec-mem 256 "P 9 5 72")
          (exec-mem 256 "P 1 4 64")
          (text-frame 10 312 70 383)
@@ -186,7 +186,7 @@
          (image-mem 0 3)
          ((cmd 209) 1 5)
          (text-frame 10 312 70 383)
-         (text "女性の局部の名称を入力します")
+         (text "Enter the name of the woman's bureau. (rephrase?)")
          (wait)
          (text-reset 14)
          (text-frame 0 0 79 399)
@@ -216,7 +216,7 @@
                (mes-jump "mes¥xgmusic.mes"))
               (//
                (text-frame 10 312 70 383)
-               (text "音源が無しになっている為、音楽室には入れません")
+               (text "Sound is disabled, so you cannot enter the music room.")
                (wait)
                (text-reset 14)))))
         (// (? (= S 4)) (nop@) (set-var L 1) (mes-jump "mes¥op_01.mes"))
