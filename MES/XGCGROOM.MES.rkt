@@ -40,7 +40,7 @@
    200
    (</>
     (/ (text "      April       "))
-    (/ (str "      Leifa       "))
+    (/ (str "      Lei Fa      "))
     (/ (str "       Nana       "))
     (/ (text "     Mitsuko      "))
     (/ (text "      Eriko       "))
