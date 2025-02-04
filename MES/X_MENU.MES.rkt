@@ -60,12 +60,12 @@
           5
           152
           (</>
-           (/ (text "   Continue   "))
-           (/ (str "  Load Save   "))
+           (/ (text "     Continue     "))
+           (/ (str "    Load Save    "))
            (/ (text "　−ａｓｏｋｏ−　"))
-           (/ (text "  Music Room  "))
-           (/ (text " Watch Opening"))
-           (/ (str "     Quit     "))))))))
+           (/ (text "    Music Room    "))
+           (/ (text "  Watch Opening  "))
+           (/ (str "       Quit       "))))))))
      (/
       (exec-mem 4768 4 8 20 16 1 0 0 4480 4480 1 0)
       (menu1

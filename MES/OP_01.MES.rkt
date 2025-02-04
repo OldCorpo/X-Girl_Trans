@@ -7,7 +7,7 @@
   (text-color 15)
   (text-frame 0 150 79 399)
   ((cmd 209) 1 5)
-  (text "                          It all started 20 years ago.")
+  (text "                         It all started 20 years ago.")
   (delay 50)
   ((cmd 209) 0 5)
   (image-file "gpc¥op_01.gpc")
