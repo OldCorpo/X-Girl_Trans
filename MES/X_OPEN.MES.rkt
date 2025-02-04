@@ -111,7 +111,7 @@
    24
    1
    40
-   (</> (/ (text "    FM Sound    ")) (/ (str "   Soundboard   ")) (/ (text "    No Sound    "))))
+   (</> (/ (text "  Internal FM  ")) (/ (str "  External FM  ")) (/ (text "    No Sound    "))))
   (exec-mem 256 "P 1 0 0")
   (if (</>
        (// (? (= S 0)) (nop@) (set-var O 0))
