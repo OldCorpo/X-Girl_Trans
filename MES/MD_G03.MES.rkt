@@ -42,7 +42,7 @@
             (mes-load? 0))
            (// (nop@))))))
    (define-proc 17 (<> (text "「Kiyomi」" 'br)))
-   (define-proc 18 (<> (text "「アンナ」" 'br)))
+   (define-proc 18 (<> (text "「Anna」" 'br)))
    (define-proc 15
      (<>
       (if (</>
