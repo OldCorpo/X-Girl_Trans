@@ -1,5 +1,5 @@
 (mes
- (meta (engine 'ADV) (charset "pc98") (extraop #t))
+ (meta (engine 'ADV) (charset "english") (extraop #t))
  (seg*
   (branch-reg 56 (</> (/) (/ (mes-jump "mes¥mb_a02.mes"))))
   (exec-mem 14080 2 24 4 135 71 80 34 80 34 0 30)
@@ -30,55 +30,70 @@
   (if (</>
        (//
         (? (= 54 #t))
-        (text "エイプリルとレイファの居場所は、見当がついたけど‥‥‥")
+        (text "I have an idea where April and Lei-Fa are, but......")
         (wait)
         (text-reset 14)
-        (text "わたしはふたりの顔も知らない訳だし、どうやって見分ければいいんだ？")
+        (text "I don't even know what they look like, so how am I supposed" 'br)
+        (text "to recognise them?")
         (wait)
         (text-reset 14))
        (//
         (? (= 922 #t) (= 53 #t))
         (nop@)
-        (text "情報部の前にやって来た。")
+        (text "I walk out of the Intelligence Division building.")
         (wait)
         (text-reset 14)
         (branch-reg
          52
          (</>
-          (/ (text "しかし、依然として何処から手をつけたらいいものやら、皆目見当もつかない‥‥‥"))
+          (/ (text "Although, I still don't even know where to start......"))
           (/
-           (text
-            "とにかく、エイプリルとレイファの元上官に逢わなければ。どんな手がかりが得られるかは不明だが、市ヶ谷ベースに行ってみよう。"))))
+           (text "I should go meet April and Lei-Fa's old boss. Even if he" 'br)
+		   (text "doesn't have much information, it's worth going to Ichigaya" 'br)
+		   (text "Base anyway."))))
         (wait)
         (text-reset 14))
        (//
         (? (= 922 #f))
-        (text "情報部のオフィスから街に出た。この辺りは軍の息がかかっているだけあって、治安はいい。")
+        (text "I exit the intelligence office and step into the streets." 'br)
+		(text "This area is well patrolled by the military, so it's" 'br)
+		(text "relatively safe.")
         (wait)
         (text-reset 14)
-        (text
-         "情報部は街のあちこちに、こんなオフィスを持っている。大抵は軍配下の「カンパニー」のオフィスで、それとは解らない偽装がされているがここはそうじゃない。")
+        (text "Intelligence has offices all over the city, usually" 'br)
+		(text "disguised as companies that work with the military. This one" 'br)
+		(text "doesn't try to hide itself, though.")
         (wait)
         (text-reset 14)
-        (text "つまりいつでもテロのターゲットになりえるって事。だから街中を私服がうろうろしてる。故に治安がいいって訳。")
+        (text "That means the office is an easy target for would-be" 'br)
+		(text "terrorists, which is why there are so many plainclothes" 'br)
+		(text "agents walking the streets and keeping this district safe.")
         (wait)
         (text-reset 14)
         (branch-reg
          52
          (</>
           (/
-           (text "こんな所には逃亡した囚人はいないだろう。彼女達が身を隠すのに都合がいい所と言えば、千葉シティかチャイナタウンだ。")
+           (text "I doubt any escaped prisoners would be here. They'd be far" 'br)
+		   (text "better off hiding in Chinatown or the maze that is" 'br)
+		   (text "Chiba City.")
            (wait)
            (text-reset 14)
-           (text "あの辺りは犯罪者や、それに類する奴等が大勢いる。もしもわたしなら、ほとぼりがさめるまで潜んでいるだろうな‥‥‥"))
+           (text "There are a lot of criminals and seedy types in those parts." 'br)
+		   (text "If I were them, I'd just go to ground and lie low until" 'br)
+		   (text "things cool down......"))
           (/
-           (text "こんな所には逃亡した囚人はいないだろう。それを言うなら市ヶ谷にだっていない。")
+           (text "No escaped prisoner would come to a place like this. If they" 'br)
+		   (text "were smart, they wouldn't set foot anywhere in Ichigaya," 'br)
+		   (text "either.")
            (wait)
            (text-reset 14)
-           (text "エイプリルとレイファの元上官ってのが、ふたりの居所を知ってる可能性だって、有り得そうもない話しだ。")
+           (text "Because of that, I really doubt April and Lei-Fa's old CO" 'br)
+		   (text "would know where they are.")
            (wait)
            (text-reset 14)
-           (text "その、元上官ってのが事件の黒幕でない限りは‥‥‥"))))
+           (text "Well, unless the \"old CO\" is the mastermind behind" 'br)
+		   (text "all this......"))))
         (nop@)
         (set-reg 53 #t)
         (wait)
@@ -95,7 +110,7 @@
    (exec-mem 256 "A 0 S 0")
    (exec-mem 256 "G 1 4 64 12 48")
    (exec-mem 4768 4 8 12 4 1 0 0 4480 4480 1 0)
-   (menu1 5 72 (</> (/ (str " 　移動　 "))))
+   (menu1 5 72 (</> (/ (str "  Travel  "))))
    (if (</>
         (//
          (? (= S 0))
@@ -121,11 +136,11 @@
           6
           144
           (</>
-           (/ (str " 　　　情報部　　　 "))
-           (/ (str " 　チャイナタウン　 "))
-           (/ (str " 　　千葉シティ　　 "))
-           (/ (set-reg 52 #t) (nop@) (text "　　市ヶ谷ベース　　"))
-           (/ (set-reg 54 #t) (nop@) (str " 　　　秋葉原　　　 "))))
+           (/ (str "  Intel Dept. Bldg  "))
+           (/ (str "     Chinatown      "))
+           (/ (str "     Chiba City     "))
+           (/ (set-reg 52 #t) (nop@) (text "   Ichigaya Base   "))
+           (/ (set-reg 54 #t) (nop@) (str "     Akihabara     "))))
          (exec-mem 256 "P 9 5 72")
          (exec-mem 256 "P 1 4 64")
          (if (</>
@@ -146,7 +161,9 @@
  (seg (? (= 1021 #t)) (exec-mem 3072 1))
  (seg (? (= S 1) (= 226 #f))
    (proc 0)
-   (text "この辺りは軍の施設が多い関係で治安がいい。住居は比較的高級だし、ホテルも一流が集まってくる。")
+   (text "This area is safe because of all the military presence" 'br)
+   (text "nearby. The housing is relatively nice, and all the best" 'br)
+   (text "hotels are here.")
    (wait)
    (text-reset 14)
    (text "しかし、わたしにとってそれらは全く関りのない世界だ。多くの軍関係者もそうだろう。")

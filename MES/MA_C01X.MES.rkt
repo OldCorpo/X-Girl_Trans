@@ -50,7 +50,7 @@
    (text-delay 0)
    (text "「Kiyomi」" 'br)
    (text-delay 2)
-   (text "Whoa, Anna, calm down. You're acting crazy.")
+   (text "Whoa, Anna, calm down. You're overreacting.")
    (wait)
    (text-reset 14)
    (text-delay 0)

@@ -359,7 +359,7 @@
   (text-delay 0)
   (text "「Anna」" 'br)
   (text-delay 5)
-  (text "I don't know who else I can trust for this")
+  (text "Kiyomi, I don't know who else I can trust for this")
   (text-delay 10)
   (text "............")
   (wait)

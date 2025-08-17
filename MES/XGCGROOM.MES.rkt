@@ -40,11 +40,11 @@
    200
    (</>
     (/ (text "      April       "))
-    (/ (str "      Lei Fa      "))
+    (/ (str "      Lei-Fa      "))
     (/ (str "       Nana       "))
     (/ (text "     Mitsuko      "))
     (/ (text "      Eriko       "))
-    (/ (text "　　　プリス　　　"))
+    (/ (text "      Priss       "))
     (/ (text "       Anna       "))
     (/ (text "   View all CGs   "))
     (/ (text "      Cancel      "))))
